@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.dragger.yangdiansheng.dragger2.data.User" />
+
+        <variable
+            name="content"
+            type="String" />
+
+        <variable
+            name="enable"
+            type="Boolean" />
+
+        <variable
+            name="event"
+            type="com.dragger.yangdiansheng.dragger2.databinding.DataBindingActivity.Event"/>
+
+        <import type="com.dragger.yangdiansheng.dragger2.utils.Utils"/>
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@{user.name }"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@{`age=`+ content}"
+                android:textColor="#ffffff"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="更新数据"
+                app:layout_constraintTop_toBottomOf="@id/tv_age" />
+
+            <Button
+                android:id="@+id/bt_login_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="@{enable}"
+                android:text="我的状态"
+                app:layout_constraintTop_toBottomOf="@id/bt_login" />
+
+            <Button
+                android:id="@+id/bt_login_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="按钮2"
+                app:layout_constraintTop_toBottomOf="@id/bt_login_1" />
+
+            <Button
+                android:id="@+id/bt_login_3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="按钮3"
+                app:layout_constraintTop_toBottomOf="@id/bt_login_2" />
+
+            <Button
+                android:id="@+id/bt_login_4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="按钮4"
+                app:layout_constraintTop_toBottomOf="@id/bt_login_3" />
+
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@{user.name + `--`+ user.age}"
+                android:textColor="#ffffff"
+                app:layout_constraintTop_toBottomOf="@+id/bt_login_4" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</layout>
+

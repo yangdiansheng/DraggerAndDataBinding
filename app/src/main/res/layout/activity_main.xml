@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dragger.yangdiansheng.dragger2.MainActivity">
+
+    <Button
+        android:id="@+id/bt_mvp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="mvp"
+        app:layout_constraintTop_toBottomOf="@id/et_password"/>
+    <Button
+        android:id="@+id/bt_dragger"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="dragger"
+        app:layout_constraintTop_toBottomOf="@id/bt_mvp"/>
+    <Button
+        android:id="@+id/bt_databinding"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="databinding"
+        app:layout_constraintTop_toBottomOf="@id/bt_dragger"/>
+
+
+</android.support.constraint.ConstraintLayout>
