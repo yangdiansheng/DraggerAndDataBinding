@@ -14,7 +14,7 @@ import com.dragger.yangdiansheng.dragger2.databinding.ActivityDatabindingBinding
 
 import com.dragger.yangdiansheng.dragger2.R;
 
-public class DataBindingActivity extends AppCompatActivity{
+public class DataBindingActivity extends ActivityBase{
 
 
     public static void show(Activity activity) {
@@ -35,7 +35,14 @@ public class DataBindingActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBuidling = DataBindingUtil.setContentView(this,R.layout.activity_databinding);
+        View view = View.inflate(this,R.layout.activity_databinding,null);
+        View viewHead = View.inflate(this,R.layout.activity_head,null);
+        View viewFoot = View.inflate(this,R.layout.activity_foot,null);
+        addContent(view);
+        addHead(viewHead);
+        addFoot(viewFoot);
+        mBuidling =  DataBindingUtil.bind(view);
+
         mBuidling.setUser(mUser);
         mBuidling.btLogin.setOnClickListener(new View.OnClickListener() {
             @Override

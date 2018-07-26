@@ -19,6 +19,9 @@
         <activity android:name=".mvp.MVPActivity"/>
         <activity android:name=".dragger.DraggerActivity"/>
         <activity android:name=".databinding.DataBindingActivity"/>
+        <activity android:name=".databinding.ActivityBase"/>
+        <activity android:name=".databinding.DataBindingRecycleViewActivity"/>
+        <activity android:name=".databinding.RecycleViewActivity"/>
     </application>
 
 </manifest>

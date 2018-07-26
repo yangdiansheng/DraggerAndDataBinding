@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.dragger.yangdiansheng.dragger2.databinding.DataBindingActivity;
+import com.dragger.yangdiansheng.dragger2.databinding.DataBindingRecycleViewActivity;
+import com.dragger.yangdiansheng.dragger2.databinding.RecycleViewActivity;
 import com.dragger.yangdiansheng.dragger2.mvp.MVPActivity;
 import com.dragger.yangdiansheng.dragger2.dragger.DraggerActivity;
 
@@ -26,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.bt_databinding)
     void databinding(){
         DataBindingActivity.show(this);
+    }
+
+    @OnClick(R.id.bt_databinding_recycleview)
+    void databindingRecycleview(){
+        DataBindingRecycleViewActivity.show(this);
+    }
+
+    @OnClick(R.id.bt_recycleview)
+    void rRecycleview(){
+        RecycleViewActivity.show(this);
     }
 
 

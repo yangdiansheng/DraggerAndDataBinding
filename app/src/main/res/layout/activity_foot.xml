@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dragger.yangdiansheng.dragger2.MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="我是脚"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:background="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_login"/>
+
+</android.support.constraint.ConstraintLayout>
